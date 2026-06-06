@@ -1,26 +1,203 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Beige + dark rouge palette */
+  --cream: #f7f0e4;          /* page background, soft beige */
+  --cream-2: #efe5d2;        /* deeper beige */
+  --sand: #e3d4ba;           /* warm sand accents */
+  --bone: #fbf6ec;           /* lightest, for cards on rouge */
+  --rouge: #5a1f24;          /* deep rouge primary */
+  --rouge-2: #74282e;        /* rouge hover */
+  --rouge-deep: #3d1418;     /* almost-black rouge */
+  --rouge-soft: #a25058;     /* dusty rose */
+  --rose: #d6a6a3;           /* blush */
+  --gold: #b78a4a;           /* champagne gold accent */
+  --gold-soft: #d6b27a;
+  --ink: #2b1a16;            /* warm near-black for text */
+  --ink-soft: #5a4a44;
+  --teal: #2f5d5a;           /* ovarian cancer awareness, used sparingly */
+
+  --background: var(--cream);
+  --foreground: var(--ink);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-cream: var(--cream);
+  --color-cream-2: var(--cream-2);
+  --color-sand: var(--sand);
+  --color-bone: var(--bone);
+  --color-rouge: var(--rouge);
+  --color-rouge-2: var(--rouge-2);
+  --color-rouge-deep: var(--rouge-deep);
+  --color-rouge-soft: var(--rouge-soft);
+  --color-rose: var(--rose);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-teal: var(--teal);
+
+  --font-serif: var(--font-serif);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html, body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "ss01", "ss02", "kern";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Subtle paper grain across the page */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-image:
+    radial-gradient(rgba(90, 31, 36, 0.05) 1px, transparent 1px),
+    radial-gradient(rgba(183, 138, 74, 0.04) 1px, transparent 1px);
+  background-size: 3px 3px, 7px 7px;
+  background-position: 0 0, 1px 2px;
+  mix-blend-mode: multiply;
+  opacity: 0.55;
 }
+
+/* Display utilities */
+.font-display { font-family: var(--font-display), ui-serif, Georgia, serif; }
+.font-serif { font-family: var(--font-serif), ui-serif, Georgia, serif; }
+
+.eyebrow {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--rouge);
+}
+
+.divider-leaf {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--rouge);
+}
+.divider-leaf::before,
+.divider-leaf::after {
+  content: "";
+  width: 36px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.5;
+}
+
+/* Subtle reveal */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes drawLine {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+.rise { animation: rise 1s cubic-bezier(.2,.7,.2,1) both; }
+.rise-1 { animation: rise 1s .12s cubic-bezier(.2,.7,.2,1) both; }
+.rise-2 { animation: rise 1s .24s cubic-bezier(.2,.7,.2,1) both; }
+.rise-3 { animation: rise 1s .36s cubic-bezier(.2,.7,.2,1) both; }
+.rise-4 { animation: rise 1s .48s cubic-bezier(.2,.7,.2,1) both; }
+.fade-in { animation: fade 1.4s ease both; }
+.draw-line { transform-origin: left; animation: drawLine 1.4s .3s cubic-bezier(.2,.7,.2,1) both; }
+.float-slow { animation: float 6s ease-in-out infinite; }
+
+/* Underline link */
+.link-rouge {
+  position: relative;
+  color: var(--rouge);
+  text-decoration: none;
+}
+.link-rouge::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -2px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(.3);
+  transform-origin: left;
+  transition: transform .4s cubic-bezier(.2,.7,.2,1);
+}
+.link-rouge:hover::after { transform: scaleX(1); }
+
+/* Buttons */
+.btn-rouge {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .95rem 1.6rem;
+  background: var(--rouge);
+  color: var(--bone);
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.92rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: transform .4s cubic-bezier(.2,.7,.2,1), background .3s ease, box-shadow .4s ease;
+  box-shadow: 0 8px 24px -16px rgba(90,31,36,.6);
+}
+.btn-rouge:hover { background: var(--rouge-2); transform: translateY(-2px); box-shadow: 0 14px 30px -16px rgba(90,31,36,.7); }
+.btn-rouge .arrow { transition: transform .4s cubic-bezier(.2,.7,.2,1); }
+.btn-rouge:hover .arrow { transform: translateX(4px); }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .9rem 1.5rem;
+  border: 1px solid rgba(90,31,36,.35);
+  color: var(--rouge);
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.86rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background .3s ease, color .3s ease, border-color .3s ease;
+}
+.btn-ghost:hover { background: var(--rouge); color: var(--bone); border-color: var(--rouge); }
+
+/* Subtle ornament SVG color helper */
+.stroke-rouge { stroke: var(--rouge); }
+.fill-rouge { fill: var(--rouge); }
+.fill-gold { fill: var(--gold); }
+
+/* Card */
+.card-paper {
+  background: var(--bone);
+  border: 1px solid rgba(90,31,36,.08);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.6) inset,
+    0 24px 60px -40px rgba(43,26,22,.35);
+}
+
+/* Selection */
+::selection { background: var(--rouge); color: var(--bone); }
+
+/* Smooth scroll & focus ring */
+html { scroll-behavior: smooth; }
+:focus-visible { outline: 2px solid var(--rouge); outline-offset: 3px; }
+
+/* Layer the body content above the grain */
+main, header, footer, nav { position: relative; z-index: 2; }
