@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="bg" cx="0.3" cy="0.28" r="0.95">
+      <stop offset="0" stop-color="#74282e"/>
+      <stop offset="0.6" stop-color="#5a1f24"/>
+      <stop offset="1" stop-color="#3d1418"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Rouge rounded background -->
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+
+  <!-- Inner gold hairline -->
+  <rect x="4.5" y="4.5" width="55" height="55" rx="11"
+        fill="none" stroke="#d6b27a" stroke-opacity="0.55" stroke-width="0.9"/>
+
+  <!-- Serif P monogram drawn as a path so it renders crisply at 16px -->
+  <g fill="#f7f0e4">
+    <!-- vertical stem with serifs -->
+    <path d="
+      M 23 17
+      L 31 17
+      L 31 47
+      L 33 47
+      L 33 50
+      L 21 50
+      L 21 47
+      L 23 47
+      Z" />
+    <!-- bowl of the P -->
+    <path d="
+      M 31 17
+      L 39 17
+      C 47 17, 50 22, 50 28
+      C 50 34, 47 38, 39 38
+      L 31 38
+      L 31 35
+      L 38 35
+      C 43 35, 45 32, 45 28
+      C 45 24, 43 20, 38 20
+      L 31 20
+      Z" />
+  </g>
+
+  <!-- Tiny gold accent — a floral dot, echoing the sprig ornaments -->
+  <circle cx="48" cy="51" r="1.8" fill="#d6b27a"/>
+  <circle cx="44" cy="53.5" r="1" fill="#d6b27a" fill-opacity="0.7"/>
+</svg>
