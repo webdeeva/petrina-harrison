@@ -22,7 +22,7 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://petrina-harrison.netlify.app"),
+  metadataBase: new URL("https://petrinaharrison.com"),
   title: {
     default:
       "Dr. Petrina N. Harrison, DNP, APRN, AGCNS-BC, CIC — No Woman Left Behind",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
       "Dr. Petrina N. Harrison, DNP, APRN, AGCNS-BC, CIC — No Woman Left Behind",
     description:
       "A life devoted to the women medicine forgot. Clinical nurse specialist, ovarian-cancer advocate, nursing professor, and patent-pending inventor.",
-    url: "https://petrina-harrison.netlify.app",
+    url: "https://petrinaharrison.com",
     siteName: "Dr. Petrina N. Harrison",
     type: "website",
     locale: "en_US",
