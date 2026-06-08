@@ -8,10 +8,10 @@ export default function Footer() {
         <div>
           <div className="font-display text-[1.6rem] text-[color:var(--rouge-deep)] leading-tight">
             <span className="italic font-light">Dr.</span>{" "}
-            <span className="font-medium">Petrina Harrison</span>
+            <span className="font-medium">Petrina N. Harrison</span>
           </div>
-          <div className="mt-1 text-[0.7rem] tracking-[0.28em] uppercase text-[color:var(--rouge)]">
-            DNP · RN · AGCNS-BC
+          <div className="mt-1 text-[0.66rem] tracking-[0.26em] uppercase text-[color:var(--rouge)]">
+            DNP · APRN · AGCNS-BC · CIC
           </div>
           <p className="mt-5 font-serif text-[1.05rem] text-[color:var(--ink-soft)] max-w-sm leading-relaxed">
             Nursing leadership in service of every woman &mdash; advocacy,
@@ -26,6 +26,7 @@ export default function Footer() {
             <li><Link href="/" className="link-rouge">Home</Link></li>
             <li><Link href="/about" className="link-rouge">About</Link></li>
             <li><Link href="/#advocacy" className="link-rouge">Advocacy</Link></li>
+            <li><Link href="/#innovation" className="link-rouge">Innovation</Link></li>
             <li><Link href="/contact" className="link-rouge">Contact</Link></li>
           </ul>
         </div>
@@ -43,7 +44,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-14 mx-auto max-w-[1400px] px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-4 text-[0.78rem] text-[color:var(--ink-soft)]">
-        <div className="tracking-[0.12em]">© 2026 Dr. Petrina Harrison · No Woman Left Behind</div>
+        <div className="tracking-[0.12em]">© 2026 Dr. Petrina N. Harrison · No Woman Left Behind</div>
         <div className="italic font-serif text-[color:var(--rouge)]/80">In service. In scholarship. In sisterhood.</div>
       </div>
     </footer>

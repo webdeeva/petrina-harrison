@@ -120,13 +120,13 @@
   <g transform="translate(80, 530)">
     <text x="0" y="0" font-family="Didot, 'Hoefler Text', serif" font-size="38" fill="#3d1418">
       <tspan font-style="italic" font-weight="300">Dr. </tspan>
-      <tspan font-weight="500">Petrina Harrison</tspan>
+      <tspan font-weight="500">Petrina N. Harrison</tspan>
     </text>
     <text x="0" y="28"
           font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
           font-size="13"
           font-weight="600"
           fill="#5a1f24"
-          letter-spacing="5">DNP · RN · AGCNS-BC</text>
+          letter-spacing="5">DNP · APRN · AGCNS-BC · CIC</text>
   </g>
 </svg>

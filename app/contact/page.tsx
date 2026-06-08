@@ -4,9 +4,9 @@ import ContactForm from "../components/ContactForm";
 import { FloralSprig, CornerOrn } from "../components/Ornament";
 
 export const metadata = {
-  title: "Contact — Dr. Petrina Harrison, DNP",
+  title: "Contact — Dr. Petrina N. Harrison",
   description:
-    "Reach Dr. Petrina Harrison for speaking engagements, advocacy partnerships, and inquiries.",
+    "Reach Dr. Petrina N. Harrison, DNP, APRN, AGCNS-BC, CIC, for speaking engagements, advocacy partnerships, and inquiries.",
 };
 
 export default function ContactPage() {
@@ -49,6 +49,9 @@ export default function ContactPage() {
               <h2 className="mt-3 font-display text-[2rem] leading-tight text-[color:var(--rouge-deep)]">
                 Office of Dr. Harrison
               </h2>
+              <div className="mt-2 text-[0.66rem] tracking-[0.26em] uppercase text-[color:var(--rouge)]">
+                DNP · APRN · AGCNS-BC · CIC
+              </div>
 
               <div className="mt-8 space-y-7 font-serif text-[1.05rem] text-[color:var(--ink)]">
                 <div>

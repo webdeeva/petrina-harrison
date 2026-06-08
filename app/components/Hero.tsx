@@ -100,7 +100,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease, delay: 0.8 }}
           >
-            Dr. Petrina Harrison, <span className="italic">DNP, RN, AGCNS-BC,</span> is a
+            Dr. Petrina N. Harrison,{" "}
+            <span className="italic">DNP, APRN, AGCNS-BC, CIC,</span> is a
             board-certified clinical nurse specialist, ovarian-cancer advocate, and
             nursing professor — leading at the bedside, in research, and in policy
             for more than two decades.
@@ -201,7 +202,7 @@ function PortraitFrame() {
         >
           <Image
             src="/petrina-hero.png"
-            alt="Dr. Petrina Harrison portrait"
+            alt="Dr. Petrina N. Harrison portrait"
             fill
             priority
             sizes="(max-width:1024px) 90vw, 580px"

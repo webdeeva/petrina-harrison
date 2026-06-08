@@ -33,14 +33,14 @@ export default function Nav() {
         <Link
           href="/"
           className="flex items-center gap-3 group"
-          aria-label="Dr. Petrina Harrison home"
+          aria-label="Dr. Petrina N. Harrison home"
         >
           <span className="font-display text-[1.35rem] md:text-[1.6rem] tracking-tight text-[color:var(--rouge-deep)] leading-none">
             <span className="italic font-light">Dr.</span>{" "}
-            <span className="font-medium">Petrina Harrison</span>
+            <span className="font-medium">Petrina N. Harrison</span>
           </span>
-          <span className="hidden md:inline-block text-[0.62rem] tracking-[0.32em] uppercase text-[color:var(--rouge)]/80 border-l border-[color:var(--rouge)]/30 pl-3 leading-none">
-            DNP · RN · AGCNS-BC
+          <span className="hidden md:inline-block text-[0.6rem] tracking-[0.28em] uppercase text-[color:var(--rouge)]/80 border-l border-[color:var(--rouge)]/30 pl-3 leading-none">
+            DNP · APRN · AGCNS-BC · CIC
           </span>
         </Link>
 
@@ -49,11 +49,12 @@ export default function Nav() {
             { href: "/", label: "Home" },
             { href: "/about", label: "About" },
             { href: "/#advocacy", label: "Advocacy" },
+            { href: "/#innovation", label: "Innovation" },
           ].map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="link-rouge text-[0.84rem] tracking-[0.18em] uppercase"
+              className="link-rouge text-[0.82rem] tracking-[0.16em] uppercase"
             >
               {l.label}
             </Link>
@@ -93,6 +94,9 @@ export default function Nav() {
             </Link>
             <Link href="/#advocacy" onClick={() => setOpen(false)} className="link-rouge tracking-[0.18em] uppercase text-sm">
               Advocacy
+            </Link>
+            <Link href="/#innovation" onClick={() => setOpen(false)} className="link-rouge tracking-[0.18em] uppercase text-sm">
+              Innovation
             </Link>
             <Link href="/contact" onClick={() => setOpen(false)} className="btn-ghost justify-center">
               Contact

@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Quote from "./components/Quote";
 import Timeline from "./components/Timeline";
 import Advocacy from "./components/Advocacy";
+import Innovation from "./components/Innovation";
 import Focus from "./components/Focus";
 import AboutBrief from "./components/AboutBrief";
 import Newsletter from "./components/Newsletter";
@@ -17,6 +18,7 @@ export default function Home() {
         <Quote />
         <Timeline />
         <Advocacy />
+        <Innovation />
         <Focus />
         <AboutBrief />
         <Newsletter />

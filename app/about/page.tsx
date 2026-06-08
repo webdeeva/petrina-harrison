@@ -6,9 +6,9 @@ import Newsletter from "../components/Newsletter";
 import { FloralSprig, CornerOrn } from "../components/Ornament";
 
 export const metadata = {
-  title: "About — Dr. Petrina Harrison, DNP",
+  title: "About — Dr. Petrina N. Harrison",
   description:
-    "The biography, credentials, and areas of focus of Dr. Petrina Harrison, DNP, RN, AGCNS-BC.",
+    "The biography, credentials, and areas of focus of Dr. Petrina N. Harrison, DNP, APRN, AGCNS-BC, CIC.",
 };
 
 export default function AboutPage() {
@@ -54,7 +54,7 @@ export default function AboutPage() {
                 <div className="relative aspect-[4/5] rounded-[36px] overflow-hidden ring-1 ring-[color:var(--rouge)]/15 shadow-[0_30px_70px_-40px_rgba(43,26,22,0.4)]">
                   <Image
                     src="/petrina-hero.png"
-                    alt="Dr. Petrina Harrison"
+                    alt="Dr. Petrina N. Harrison"
                     fill
                     sizes="(max-width:1024px) 90vw, 480px"
                     className="object-cover"
@@ -69,10 +69,10 @@ export default function AboutPage() {
                 </div>
                 <div className="mt-6 text-center">
                   <div className="font-display text-[1.4rem] text-[color:var(--rouge-deep)]">
-                    Petrina Harrison, DNP, RN, AGCNS-BC
+                    Petrina N. Harrison
                   </div>
-                  <div className="mt-1 text-[0.72rem] tracking-[0.28em] uppercase text-[color:var(--rouge)]">
-                    Doctor of Nursing Practice
+                  <div className="mt-1 text-[0.66rem] tracking-[0.24em] uppercase text-[color:var(--rouge)]">
+                    DNP · APRN · AGCNS-BC · CIC
                   </div>
                 </div>
               </div>
@@ -126,12 +126,14 @@ export default function AboutPage() {
                 <ul className="mt-6 grid sm:grid-cols-2 gap-3 list-none">
                   {[
                     "Doctor of Nursing Practice (DNP)",
-                    "Board-Certified Adult-Gerontology Clinical Nurse Specialist",
-                    "Certified Infection Preventionist",
+                    "Advanced Practice Registered Nurse (APRN)",
+                    "Board-Certified Adult-Gerontology Clinical Nurse Specialist (AGCNS-BC)",
+                    "Certified in Infection Control (CIC)",
                     "Over two decades of practice",
                     "National award-winning presenter and speaker",
                     "Sigma global advocate",
                     "Nursing professor",
+                    "Patent-pending inventor (USPTO 19/574,302)",
                   ].map((c) => (
                     <li
                       key={c}

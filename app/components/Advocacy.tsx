@@ -134,7 +134,7 @@ export default function Advocacy() {
           >
             <Image
               src="/petrina-research.webp"
-              alt="Dr. Petrina Harrison presenting ovarian cancer research"
+              alt="Dr. Petrina N. Harrison presenting ovarian cancer research"
               fill
               sizes="(max-width:1024px) 90vw, 500px"
               className="object-cover"

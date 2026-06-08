@@ -29,7 +29,7 @@ export default function AboutBrief() {
           >
             <Image
               src="/petrina-about.png"
-              alt="Dr. Petrina Harrison"
+              alt="Dr. Petrina N. Harrison"
               fill
               sizes="(max-width:1024px) 90vw, 480px"
               className="object-cover"
@@ -123,11 +123,11 @@ export default function AboutBrief() {
           >
             {[
               "Doctor of Nursing Practice (DNP)",
+              "Advanced Practice RN (APRN)",
               "Board-Certified AGCNS-BC",
-              "Certified Infection Preventionist",
+              "Certified Infection Preventionist (CIC)",
               "Sigma Global Advocate",
-              "Nursing Professor",
-              "Two Decades of Practice",
+              "Patent-Pending Inventor",
             ].map((c) => (
               <motion.div
                 key={c}
