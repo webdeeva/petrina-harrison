@@ -58,8 +58,8 @@ export default function ContactPage() {
                   <div className="text-[0.7rem] tracking-[0.24em] uppercase text-[color:var(--rouge)]">
                     Email
                   </div>
-                  <a className="mt-2 link-rouge inline-block" href="mailto:agaylewfg@gmail.com">
-                    agaylewfg@gmail.com
+                  <a className="mt-2 link-rouge inline-block" href="mailto:support@hopecareglobal.org">
+                    support@hopecareglobal.org
                   </a>
                 </div>
                 <div>

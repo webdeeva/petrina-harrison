@@ -35,7 +35,7 @@ export default function Footer() {
           <div className="eyebrow">Reach Out</div>
           <ul className="mt-4 space-y-2 font-serif text-[1.02rem] text-[color:var(--ink-soft)]">
             <li>
-              <a className="link-rouge" href="mailto:agaylewfg@gmail.com">agaylewfg@gmail.com</a>
+              <a className="link-rouge" href="mailto:support@hopecareglobal.org">support@hopecareglobal.org</a>
             </li>
             <li>23822 116th Rd</li>
             <li>Elmont, NY 11003</li>
