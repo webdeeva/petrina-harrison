@@ -231,10 +231,13 @@ function PortraitFrame() {
         <div className="absolute inset-3 rounded-t-[240px] rounded-b-[20px] border border-[color:var(--gold-soft)]/55 pointer-events-none" />
       </div>
 
-      {/* Floating cards — gentle parallax + drift */}
-      <Parallax amount={18} className="absolute -left-6 md:-left-10 bottom-12">
+      {/* Floating cards — gentle parallax + drift
+          On mobile, both cards live near the bottom edge so they
+          never cover Dr. Harrison's face. On md+ the Specialty card
+          jumps back to its top-right anchor. */}
+      <Parallax amount={18} className="absolute -left-2 md:-left-10 bottom-4 md:bottom-12">
         <motion.div
-          className="card-paper rounded-2xl px-5 py-4 flex items-center gap-3"
+          className="card-paper rounded-2xl px-4 md:px-5 py-3 md:py-4 flex items-center gap-3"
           initial={{ opacity: 0, x: -16 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease, delay: 1 }}
@@ -258,9 +261,12 @@ function PortraitFrame() {
         </motion.div>
       </Parallax>
 
-      <Parallax amount={-22} className="absolute -right-4 md:-right-8 top-10">
+      <Parallax
+        amount={-22}
+        className="absolute -right-2 md:-right-8 bottom-32 sm:bottom-28 md:bottom-auto md:top-10"
+      >
         <motion.div
-          className="card-paper rounded-2xl px-5 py-4 max-w-[230px]"
+          className="card-paper rounded-2xl px-4 md:px-5 py-3 md:py-4 max-w-[180px] md:max-w-[230px]"
           initial={{ opacity: 0, x: 16 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease, delay: 1.2 }}
